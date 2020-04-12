@@ -11,7 +11,7 @@ services:
     volumes:
       - .:/app
     environment:
-      DATABASE_URL: "pgsql://postgres:crm_project@db:5432/crm_project_db"
+      DATABASE_URL: "pgsql://postgres:crm_project@db:15432/crm_project_db"
       WEB_DOCUMENT_ROOT: /app/public
       WEB_DOCUMENT_INDEX: index.php
       PHP_DATE_TIMEZONE: "Europe/Paris"
