@@ -8,26 +8,26 @@ use PHPUnit\Framework\TestCase;
 
 class ContactTest extends TestCase
 {
-    public function testConstructor()
+
+    private $contact;
+
+    public function setUp(): void
     {
-        $contact = new Contact("lastname","firstname","email@email.fr","0750933920");
-        static::assertSame(
-            "lastname",
-            $contact->getLastName()
-        );
+        $this->contact = new Contact();
+        $this->contact->setFirstname('toto');
+        $this->contact->setLastname('foo');
+        $this->contact->setEmail('toto@mail.com');
+        $this->contact->setPhoneNumber('0644586295');
     }
 
-    public function testConstructorWithEmptyString()
+    public function tearDown(): void
     {
-        $contact = new Contact("","","","");
-        static::assertEmpty(
-            $contact->getLastName()
-        );
+        unset($this->contact);
     }
 
     public function testGetId()
     {
-        $contact = new Contact("","","","");
+        $contact = new Contact();
         static::assertSame(
             null,
             $contact->getId()
@@ -36,17 +36,17 @@ class ContactTest extends TestCase
 
     public function testSetLastname()
     {
-        $contact = new Contact("","","","");
+        $contact = new Contact();
         $contact->setLastName("lastname");
         static::assertSame(
             "lastname",
-            $contact->getLastname()
+            $contact->getLastName()
         );
     }
 
     public function testSetFirstName()
     {
-        $contact = new Contact("","","","");
+        $contact = new Contact();
         $contact->setFirstName("firstname");
         static::assertSame(
             "firstname",
@@ -56,7 +56,7 @@ class ContactTest extends TestCase
 
     public function testSetEmail()
     {
-        $contact = new Contact("","","","");
+        $contact = new Contact();
         $contact->setEmail("email@email.fr");
         static::assertSame(
             "email@email.fr",
@@ -66,11 +66,12 @@ class ContactTest extends TestCase
 
     public function testSetPhoneNumber()
     {
-        $contact = new Contact("","","","");
+        $contact = new Contact();
         $contact->setPhoneNumber("0750933920");
         static::assertSame(
             "0750933920",
             $contact->getPhoneNumber()
         );
     }
+
 }

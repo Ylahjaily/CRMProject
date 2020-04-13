@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h1>Contact list</h1>
+
+    <a href="{{ path('contact_new') }}">New contact</a>
+
+    {% if contacts %}
+
+        <table>
+
+            <th>Firstname</th>
+            <th>LastName</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+
+            {% for contact in contacts %}
+                <tr>
+                    <td>{{ contact.firstName }}</td>
+                    <td>{{ contact.lastName }}</td>
+                    <td>{{ contact.phoneNumber }}</td>
+                    <td>{{ contact.email }}</td>
+                    <td><a href="{{ path('contact_edit', {id : contact.id}) }}">edit</a></td>
+                    <td><a href="{{ path('contact_delete', {id : contact.id}) }}">delete</a></td>
+                </tr>
+            {% endfor %}
+
+        </table>
+
+    {% endif %}
+
+{% endblock %}
