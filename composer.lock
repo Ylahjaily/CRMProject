@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ed9954c7ab3f4de256ba0f4c593b9d5f",
+    "content-hash": "3f9cdffac5fb44d7a44ada62f89d9bfd",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1462,6 +1462,76 @@
                 "psr-3"
             ],
             "time": "2020-03-23T09:12:05+00:00"
+        },
+        {
+            "name": "sensio/framework-extra-bundle",
+            "version": "v3.0.27",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sensiolabs/SensioFrameworkExtraBundle.git",
+                "reference": "2651d2c70c5fec10beaa670c61fd8ff1e8b3869a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/2651d2c70c5fec10beaa670c61fd8ff1e8b3869a",
+                "reference": "2651d2c70c5fec10beaa670c61fd8ff1e8b3869a",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "~2.2",
+                "symfony/dependency-injection": "~2.3|~3.0|~4.0",
+                "symfony/framework-bundle": "~2.3|~3.0|~4.0"
+            },
+            "require-dev": {
+                "doctrine/doctrine-bundle": "~1.5",
+                "doctrine/orm": "~2.4,>=2.4.5",
+                "symfony/asset": "~2.7|~3.0|~4.0",
+                "symfony/browser-kit": "~2.3|~3.0|~4.0",
+                "symfony/dom-crawler": "~2.3|~3.0|~4.0",
+                "symfony/expression-language": "~2.4|~3.0|~4.0",
+                "symfony/finder": "~2.3|~3.0|~4.0",
+                "symfony/phpunit-bridge": "~3.2|~4.0",
+                "symfony/psr-http-message-bridge": "^0.3|^1.0",
+                "symfony/security-bundle": "~2.4|~3.0|~4.0",
+                "symfony/templating": "~2.3|~3.0|~4.0",
+                "symfony/translation": "~2.3|~3.0|~4.0",
+                "symfony/twig-bundle": "~2.3|~3.0|~4.0",
+                "symfony/yaml": "~2.3|~3.0|~4.0",
+                "twig/twig": "~1.12|~2.0",
+                "zendframework/zend-diactoros": "^1.3"
+            },
+            "suggest": {
+                "symfony/expression-language": "",
+                "symfony/psr-http-message-bridge": "To use the PSR-7 converters",
+                "symfony/security-bundle": ""
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sensio\\Bundle\\FrameworkExtraBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "This bundle provides a way to configure your controllers with annotations",
+            "keywords": [
+                "annotations",
+                "controllers"
+            ],
+            "time": "2017-08-23T12:40:59+00:00"
         },
         {
             "name": "symfony/cache",
@@ -3973,6 +4043,56 @@
                 "templating"
             ],
             "time": "2020-02-11T15:31:23+00:00"
+        },
+        {
+            "name": "zalas/param-converter-bundle",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jakzal/ParamConverterBundle.git",
+                "reference": "aa2b8c16a24636d731aeaa5382a47d383449bf83"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jakzal/ParamConverterBundle/zipball/aa2b8c16a24636d731aeaa5382a47d383449bf83",
+                "reference": "aa2b8c16a24636d731aeaa5382a47d383449bf83",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0",
+                "sensio/framework-extra-bundle": "^3.0.3"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "^3.4",
+                "phpunit/phpunit": "^6.1.4",
+                "symfony/browser-kit": "^3.2||^4.0",
+                "symfony/config": "^3.2||^4.0",
+                "symfony/dom-crawler": "^3.2||^4.0",
+                "symfony/framework-bundle": "^3.2.8||^4.0"
+            },
+            "type": "bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zalas\\Bundle\\ParamConverterBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jakub Zalas",
+                    "email": "jakub@zalas.pl"
+                }
+            ],
+            "description": "Bundle that provides additional param converters for Symfony",
+            "time": "2017-05-23T15:42:10+00:00"
         },
         {
             "name": "zendframework/zend-code",
