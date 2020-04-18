@@ -98,6 +98,8 @@ class ContactController extends AbstractController
             return $this->redirectToRoute('home');
         }
 
+
+
         return $this->render('contact_edit.html.twig',[
             'form' => $form->createView(),
             'conference' => $contact

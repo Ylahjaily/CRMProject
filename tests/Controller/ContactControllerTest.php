@@ -46,16 +46,15 @@ class ContactControllerTest extends WebTestCase
     {
         $client = static::createClient();
         $client->followRedirects(true);
-        $client->request('GET', '/contact/new');
-
+        $crawler = $client->request('GET', '/contact/new');
 
         $this->assertResponseIsSuccessful();
 
         $client->submitForm('Submit', [
-            'contact[firstname]' => 'Franck',
-            'contact[lastname]' => 'Lampard',
-            'contact[email]' => 'email@email.com',
-            'contact[phoneNumber]' => '0750933920'
+            'contact[firstName]' => 'Franck',
+            'contact[lastName]' => 'Lampard',
+            'contact[email]' => 'franck@lampard.com',
+            'contact[phoneNumber]' => '0887789990'
         ]);
 
         $this->assertSelectorTextContains('h1', 'Contact list');
@@ -65,14 +64,13 @@ class ContactControllerTest extends WebTestCase
     {
         $client = static::createClient();
         $client->followRedirects(true);
-        $client->request('GET', '/contact/new');
-
+        $crawler = $client->request('GET', '/contact/edit/1');
 
         $this->assertResponseIsSuccessful();
 
         $client->submitForm('Submit', [
-            'contact[firstname]' => 'Franck',
-            'contact[lastname]' => 'Lampard'
+            'contact[firstName]' => 'Franck',
+            'contact[lastName]' => 'DeBoear'
         ]);
 
         $this->assertSelectorTextContains('h1', 'Contact list');
